@@ -1,0 +1,40 @@
+@api = http://localhost:3000/products
+
+
+GET {{api}}   
+
+###  creando una persona en la lista
+
+POST {{api}}
+Content-Type: application/json
+
+{
+    "fullname": "Alicia",
+    "birth": "1962-01-01",
+    "parentesco": "Adulto"
+}
+
+###  buscando una persona
+
+
+GET {{api}}/1
+
+###  borrar persona de la lista
+
+DELETE {{api}}/9
+
+
+### obtener el numero total de personas
+GET {{api}}/count
+
+
+###actualizar los datos de alguna persona segun su id
+PUT {{api}}/8
+Content-Type: application/json
+
+{
+    "fullname":"Cristiano",
+    "birth":"05-02-1977",
+    "parentesco":"Padre"
+}
+
